@@ -1,0 +1,196 @@
+@import '@siemens/ix/dist/siemens-ix/siemens-ix.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Siemens IX Design System Tokens */
+@layer base {
+  :root {
+    /* IX Cyan Primary */
+    --primary: 195 100% 29%;
+    --primary-foreground: 0 0% 100%;
+
+    /* IX Layered Surfaces */
+    --background: 210 20% 98%;
+    --foreground: 210 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 25% 10%;
+
+    --secondary: 210 15% 93%;
+    --secondary-foreground: 210 25% 15%;
+
+    --muted: 210 15% 93%;
+    --muted-foreground: 210 10% 50%;
+
+    --accent: 190 100% 95%;
+    --accent-foreground: 195 100% 25%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 18% 87%;
+    --input: 210 18% 87%;
+    --ring: 195 100% 29%;
+
+    --radius: 4px;
+
+    /* RAG Colors */
+    --rag-green: 142 71% 45%;
+    --rag-amber: 38 92% 50%;
+    --rag-red: 0 72% 51%;
+    --rag-cyan: 190 100% 45%;
+
+    /* Surfaces */
+    --surface: 0 0% 100%;
+    --surface-raised: 210 20% 99%;
+    --surface-overlay: 0 0% 100%;
+
+    /* Data freshness & trust */
+    --freshness-live: 142 71% 45%;
+    --freshness-stale: 38 92% 50%;
+    --freshness-offline: 0 72% 51%;
+
+    /* IX Elevation Shadows */
+    --elevation-1: 0 1px 3px 0 hsl(210 25% 10% / 0.06);
+    --elevation-2: 0 2px 8px 0 hsl(210 25% 10% / 0.08);
+    --elevation-3: 0 8px 24px 0 hsl(210 25% 10% / 0.12);
+    --elevation-4: 0 16px 48px 0 hsl(210 25% 10% / 0.16);
+
+    /* Sidebar */
+    --sidebar-background: 210 25% 12%;
+    --sidebar-foreground: 210 15% 85%;
+    --sidebar-primary: 190 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 18%;
+    --sidebar-accent-foreground: 210 15% 90%;
+    --sidebar-border: 210 20% 20%;
+    --sidebar-ring: 190 100% 45%;
+  }
+
+  .dark {
+    --primary: 190 100% 45%;
+    --primary-foreground: 210 25% 5%;
+
+    --background: 210 25% 8%;
+    --foreground: 210 15% 90%;
+
+    --card: 210 22% 12%;
+    --card-foreground: 210 15% 90%;
+
+    --popover: 210 22% 12%;
+    --popover-foreground: 210 15% 90%;
+
+    --secondary: 210 20% 16%;
+    --secondary-foreground: 210 15% 85%;
+
+    --muted: 210 20% 16%;
+    --muted-foreground: 210 10% 55%;
+
+    --accent: 190 60% 15%;
+    --accent-foreground: 190 100% 65%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 20% 20%;
+    --input: 210 20% 20%;
+    --ring: 190 100% 45%;
+
+    --surface: 210 22% 12%;
+    --surface-raised: 210 20% 14%;
+    --surface-overlay: 210 22% 16%;
+
+    --freshness-live: 142 71% 45%;
+    --freshness-stale: 38 92% 50%;
+    --freshness-offline: 0 62% 40%;
+
+    --sidebar-background: 210 25% 6%;
+    --sidebar-foreground: 210 15% 85%;
+    --sidebar-primary: 190 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 14%;
+    --sidebar-accent-foreground: 210 15% 90%;
+    --sidebar-border: 210 20% 15%;
+    --sidebar-ring: 190 100% 45%;
+  }
+}
+
+/* Siemens Element Typography Utilities */
+@layer utilities {
+  .si-display {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .si-h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .si-h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .si-h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .si-h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .si-body {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .si-body-lg {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .si-caption {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  .si-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    color-scheme: light;
+  }
+  .dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Siemens Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* IX elevation classes */
+.elevation-1 { box-shadow: var(--elevation-1); }
+.elevation-2 { box-shadow: var(--elevation-2); }
+.elevation-3 { box-shadow: var(--elevation-3); }
+.elevation-4 { box-shadow: var(--elevation-4); }
